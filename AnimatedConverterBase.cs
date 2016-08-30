@@ -218,5 +218,11 @@ namespace AT_Utils
 		}
 		#endregion
 	}
+
+	public class ResourceConverterUpdater : ModuleUpdater<AnimatedConverterBase>
+	{
+		protected override void on_rescale(ModulePair<AnimatedConverterBase> mp, Scale scale)
+		{ mp.module.SetRatesMultiplier(mp.base_module.RatesMultiplier * scale.absolute.cube * scale.absolute.aspect); }
+	}
 }
 
