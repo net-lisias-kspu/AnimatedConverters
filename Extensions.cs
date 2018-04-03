@@ -7,15 +7,15 @@
 
 namespace AT_Utils
 {
-	public static class AnimatedConvertersExtensions
-	{
-		public static PartResourceDefinition GetResourceDef(this PartModule pm, string name)
-		{
-			var res = PartResourceLibrary.Instance.GetDefinition(name);
-			if(res == null) 
-				pm.ConfigurationInvalid("no '{0}' resource in the library", name);
-			return res;
-		}
-	}
+    public static class AnimatedConvertersExtensions
+    {
+        public static PartResourceDefinition GetResourceDef(this PartModule pm, string name)
+        {
+            var res = PartResourceLibrary.Instance.GetDefinition(name);
+            if(res == null) 
+                pm.ConfigurationInvalid("no '{0}' resource in the library", name);
+            return res;
+        }
+    }
 }
 
